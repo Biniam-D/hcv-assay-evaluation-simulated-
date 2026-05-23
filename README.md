@@ -1,14 +1,15 @@
 # HCV Assay Evaluation — Simulated Diagnostic Performance Analysis
 
-A Python-based simulation and diagnostic performance evaluation of a Hepatitis C Core Antigen assay versus Nucleic Acid Amplification Testing (NAAT), modeled after published clinical research including a multi-center study in *Microbiology Spectrum* (2024).
+This project simulates an HCV diagnostic assay evaluation using Python. It compares a Hepatitis C Core Antigen assay to Nucleic Acid Amplification Testing (NAAT) as the reference method, based on real published research.
 
 ---
 
-## Overview
+## What This Project Does
 
-This project simulates a real-world HCV diagnostic assay evaluation study using probabilistic data generation and standard clinical performance metrics. It covers the full data science lifecycle: data simulation, exploratory analysis, feature engineering, and algorithm evaluation.
-
-Discordant cases (false negatives at low viral loads) are deliberately engineered to reflect a known clinical limitation of antigen-based assays — particularly relevant to treatment monitoring populations.
+- Generates a simulated patient and specimen dataset
+- Assigns viral loads, antigen signals, and test results
+- Introduces false negatives at low viral loads to reflect a known real-world limitation
+- Evaluates how well the antigen assay agrees with NAAT using standard diagnostic metrics
 
 ---
 
@@ -20,45 +21,36 @@ Discordant cases (false negatives at low viral loads) are deliberately engineere
 | Specificity | 100.0% |
 | Overall Concordance | 97.3% |
 | Cohen's Kappa | 0.914 |
-| Discordant Cases | 14 / 512 specimens |
-| Discordance Pattern | All false negatives at viral loads 500–5,000 IU/mL |
+| Discordant Cases | 14 out of 512 specimens |
+
+All discordant cases were false negatives occurring at low viral loads (500–5,000 IU/mL).
 
 ---
 
-## Dataset Structure
+## Data
 
-Two linked relational datasets:
+Two simulated datasets:
 
-- **Patient-level** (n = 450): patient ID, age, sex
-- **Specimen-level** (n = 512): specimen ID, patient ID, specimen type (Screening/Monitoring), collection date, viral load, NAAT result, antigen signal, antigen result
-
----
-
-## Methods
-
-- Probabilistic data simulation (numpy: normal, log-normal, rule-based discordant case injection)
-- Exploratory data analysis
-- Diagnostic performance evaluation: sensitivity, specificity, concordance, confusion matrix
-- Agreement analysis: Cohen's kappa (scikit-learn)
-- Visualization: viral load distribution, viral load vs. antigen signal (log-scaled), confusion matrix heatmap
+- **Patients** (n = 450): ID, age, sex
+- **Specimens** (n = 512): specimen type, collection date, viral load, NAAT result, antigen signal, antigen result
 
 ---
 
-## Tech Stack
+## Tools Used
 
 Python · pandas · numpy · scikit-learn · matplotlib · Jupyter Notebook
 
 ---
 
-## Clinical Context
+## Background
 
-Inspired by contributed research on HCV antigen assay performance in a U.S. population:
+This simulation is based on a study I contributed to:
 
-> Degaga B. et al. *Comparison of a Hepatitis C Core Antigen Assay to Nucleic Acid Amplification Testing for Detection of HCV Viremia in a U.S. Population.* Microbiology Spectrum, 2024. Poster presented at AACC Annual Scientific Meeting & Clinical Lab Expo, 2023.
+> Degaga B. et al. *Comparison of a Hepatitis C Core Antigen Assay to Nucleic Acid Amplification Testing for Detection of HCV Viremia in a U.S. Population.* Microbiology Spectrum, 2024. Poster presented at AACC Annual Scientific Meeting, 2023.
 
 ---
 
 ## Author
 
 **Biniam Degaga** — M.S. Data Science candidate | Medical Laboratory Scientist  
-[LinkedIn](https://www.linkedin.com/in/) <!-- add your LinkedIn URL -->
+[LinkedIn](https://www.linkedin.com/in/YOUR-URL-HERE)
