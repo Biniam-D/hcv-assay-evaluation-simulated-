@@ -49,6 +49,6 @@ This simulation is based on a study I contributed to:
 > Degaga B. et al. *Comparison of a Hepatitis C Core Antigen Assay to Nucleic Acid Amplification Testing for Detection of HCV Viremia in a U.S. Population.* Microbiology Spectrum, 2024. Poster presented at AACC Annual Scientific Meeting, 2023.
 
 ---
-Author
-**Biniam Degaga** — M.S. Data Science candidate | Medical Laboratory Scientist  
+## Author
 
+**Biniam Degaga** — M.S. Data Science candidate | Medical Laboratory Scientist
